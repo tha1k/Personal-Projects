@@ -1,0 +1,193 @@
+body{
+    background-color: #FFF; /*default background color shoulbe be completely white*/
+    font-family: sans-serif,'Segoe UI'; /*font should be sans-serif if not available Segoe UI*/
+    margin: 3px;
+}
+
+header{
+    /*font is size 20 and background color is darkish navy blue */
+    padding: 10px;
+    font-size: 20px;
+    background-color: #1a3959;
+
+}
+
+#logo{
+    /*logo should have a width of 90px unless differently specified*/
+    width: 60px;
+    /*floats after at the end h1 text */
+    float: inline-end;  
+}
+
+nav>ul{
+    /*layout of the links should be in row or rows if one is not large enough*/
+    /*display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    /*list of links should not be bullet points*/
+    list-style: none;
+}    
+
+nav>ul>li{
+    /*nav list items should have 10px paddding all around*/
+    padding: 10px;
+}
+
+/*following link rules apply to header and footer links*/
+nav > ul > li > a:link, 
+footer  section  address  a:link {
+    /* (default) white without underline */
+    color: white;
+    text-decoration: none;
+}
+
+
+nav > ul > li > a:visited {
+    /*black with black dashed underline*/
+    color: black;
+    text-decoration: underline dashed;
+    text-decoration-color: black;
+}
+/*footer links when click are (underlined) grey because black is not visible*/
+footer  section  address  a:visited{
+    color: darkgray;
+    text-decoration: underline dashed;
+    text-decoration-color: darkgrey;
+}
+
+nav > ul > li > a:hover, 
+footer  section  address  a:hover{
+    /* white with white underline */
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+
+nav > ul > li > a:active {
+    /* on click white with black dashed underline */
+    color: white;
+    text-decoration: underline dashed;
+    text-decoration-color: black;
+}
+/*footer links when clicked are underlined white because black is not visible*/
+footer  section  address  a:active{
+    color: white;
+    text-decoration: underline dashed;
+    text-decoration-color: white;
+}
+
+aside{
+    /*aside is a little darker than main*/
+    background-color: #FAFAFA;
+    /*float on the left side of main content taking 25% of the bodies elememt screen real-estate*/
+    width: fit-content;
+    float: left;  
+    /*pad with 10 px from other elements (body and main */              
+    padding: 10px; 
+}
+
+
+main a:link{
+    /*links inside main should be blue by default with no underline*/
+    color:darkblue;
+    text-decoration: none;
+}
+main a:visited{
+    /*links inside main should be dark grey with the same color underline when visited*/
+    color:rgb(74, 73, 73);
+    text-decoration: underline ;
+    text-decoration-color: rgb(74, 73, 73);
+    
+}
+main a:hover{
+    /*on hover links should be dark blue with underline*/
+    color:darkblue;
+    text-decoration: underline ;
+    text-decoration-color: darkblue;
+} 
+main a:active{
+    /*on click the should be like at hover state but with dashed underline instead*/
+    color:darkblue;
+    text-decoration: dashed underline ;
+    text-decoration-color: darkblue;
+}
+
+footer{
+    /*footer should have a 14px font that is almost white*/
+    font-size: 14px;
+    color :  #FAFAFA;
+    /*footer should be very dark blue */
+    background-color: #1A252F;
+    /*footer takes the entire width of the screen*/
+    clear:both;
+    /*footer content is centered */
+    text-align: center;
+    /*
+    content only spans in the middle of the footer and not the entire screen 
+    and is also padded from the main element 
+    */
+    padding: 5% 25%;
+
+    margin-top: 10px;
+}
+
+/*Main content styling*/
+/*pad aread around article*/
+article{
+    font-family: Arial, sans-serif;
+    padding: 5% 15%;
+}
+/*pad sections inside articles to emphasize them as units*/
+article>section{
+    padding: 0% 5%
+}
+
+/*abbriviations, definitions and definition items should be bold and in italics*/
+abbr,dfn, dl>dt{
+    font-weight: bolder;
+    font-style: italic;
+}
+
+/*first letter in definition dd in definition list should be larger than other letters in the paragraph bold and fancy*/
+/*quotes should have fancy quotations*/
+dd>p::first-letter, p>q::before, p>q::after{
+    font-size: larger;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+}
+
+
+/*book covers should float right */
+.book-cover{
+    float: right;
+    width: 175px;
+    height: auto;
+    /*add 2 px thick dark border with rounded corners */
+    border: 2px solid #000;
+    border-radius: 8px;
+}
+
+/* Shared box-shadow class between book-covers and lectures items*/
+.box-shadow {
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.35);
+}
+.box-shadow:hover{
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+}
+.lectures{
+    float:left;
+    /*t , r , b , l*/
+    margin: 0px 10px 15px 0px;
+    position: relative;  
+}
+
+
+section{
+    padding: 10px 0px;
+}
+/*lecture titles should have 2 chars margin from video and be in a seperate row*/
+.lectures-header, .book-header{
+    margin-top: 3em;
+    clear:both;
+}

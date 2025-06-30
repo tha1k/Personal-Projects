@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Εγγραφή Χρήστη</title>
+    <link rel="stylesheet" href="Exercise5.css">
+    <script src="validate.js" defer></script>
+    
+</head>
+<body>
+    <header>
+        <img id='logo' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0fYvsugbnEWUGwuKNTtNtEO9o9ZtTugPEHQ&s" alt="site logo"/>
+        <h1>e-learning INF</h1>
+        <nav>
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" id="menu-label">
+                <svg viewBox="0 0 100 100" width="40" height="40" class="menu-icon">
+                    <line class="line top" x1="10" y1="30" x2="90" y2="30" />
+                    <line class="line middle" x1="10" y1="50" x2="90" y2="50" />
+                    <line class="line bottom" x1="10" y1="70" x2="90" y2="70" />
+                </svg>
+            </label>
+            
+            <ul id="nav-list">
+                <li><a href="index5.html">Αρχική</a></li>
+                <li><a href="categories.html">Θεματικές Κατηγορίες</a></li>
+                <li><a href="oodesign.html">Aντικειμενοστρεφής Σχεδίαση</a></li>
+                <li><a href="java-programming.html">Προγραμματισμός Java</a></li>
+                <li><a href="intro-to-ood.html">Εισαγωγική διάλεξη Object Oriented Programming in Java</a></li>
+                <li><a href="java-book.html">Effective-Java-Joshua-Bloch</a></li>
+                <li><a href="about-us.html">Ποιοι Είμαστε</a></li>
+                <li><a href="ContactUs.html">Φόρμα Επικοινωνίας</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main id="contact_form">
+        <h1>Εγγραφείτε στην πλατφόρμα μας</h1>
+        <form id="registrationForm" action="#" method="POST">
+            <fieldset>
+                <legend>Προσωπικά Στοιχεία</legend>
+
+                <label for="fullName">Ονοματεπώνυμο</label>
+                <input type="text" id="fullName" name="fullName" required autocomplete="name" placeholder="πχ Γιώργος Γεωργίου">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required autocomplete="email" placeholder="name@anything.com">
+
+                <label for="dob">Ημερομηνία Γέννησης</label>
+                <input type="date" id="dob" name="dob" required>
+                
+                <form id="registrationForm">
+                    <label for="country">Επιλέξτε Χώρα:</label>
+                    <select id="country" name="country" required>
+                        <option value="us">ΗΠΑ</option>
+                        <option value="uk">Ηνωμένο Βασίλειο</option>
+                        <option value="gr">Ελλάδα</option>
+                </select>
+
+                <label for="phone">Τηλέφωνο</label>
+                <input name="phone" id="phone" required placeholder="+30 6901019999">
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Στοιχεία Ταυτοποίησης</legend>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required autocomplete="username" placeholder="π.χ. mariapap">
+
+                <label for="password">Κωδικός:</label>
+                <input type="password" id="password" name="password" required pattern=".{8,}" minlength="8" title="κωδικοί τουλάχιστον 8 χαρακτήρων." >
+
+                <label for="confirmPassword">Επιβεβαίωση Κωδικού:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                
+            </fieldset>
+
+            <fieldset>
+                <legend>Επικοινωνία</legend>
+                
+                <label for="contactMethod">Προτιμώμενος Τρόπος Επικοινωνίας:</label>
+                
+                <select id="contactMethod" name="contactMethod">
+                    <option value="email">Email</option>
+                    <option value="sms">SMS</option>
+                    <option value="viber">Viber</option>
+                    <option value="whatsapp">WhatsApp</option>
+                </select>
+
+                <div id="opt_in">
+                    <input type="checkbox" id="emailOptIn" name="emailOptIn">
+                    <label for="emailOptIn">Θέλω να λαμβάνω ενημερώσεις μέσω email</label>
+                </div>
+            </fieldset>
+            <details>
+                <summary>Πείτε μας μερικά πράγματα για το εαυτό σας !</summary>
+                <fieldset>
+                    <legend>Ερωτηματολόγιο</legend>
+                    
+                    <label for="education">Μορφωτικό Επίπεδο:</label>
+                    <input list="educationLevels" id="education" name="education" required placeholder="Επιλέξτε ή πληκτρολογήστε...">
+
+                    <datalist id="educationLevels">
+                        <option value="Λύκειο">
+                        <option value="Πτυχίο">
+                        <option value="Μεταπτυχιακό">
+                        <option value="Διδακτορικό">
+                    </datalist>
+    
+                    <label for="profession">Επάγγελμα:</label>
+                    <input type="text" id="profession" name="profession" required placeholder="π.χ. Καθηγητής">
+    
+                    <label for="workExperience">Χρόνια Εργασιακής Εμπειρίας:</label>
+                    <input type="number" id="workExperience" name="workExperience" min="0" placeholder="π.χ. 5">
+    
+                    <label for="programmingLanguage">Αγαπημένη Γλώσσα Προγραμματισμού:</label>
+                    <input list="programmingLanguages" id="programmingLanguage" name="programmingLanguage" placeholder="Επιλέξτε ή πληκτρολογήστε...">
+                    <datalist id="programmingLanguages">
+                        <option value="Python">
+                        <option value="JavaScript">
+                        <option value="Java">
+                        <option value="C">
+                        <option value="C++">
+                        <option value="C#">
+                        <option value="Ruby">
+                        <option value="PHP">
+                        <option value="Go">
+                        <option value="Swift">
+                        <option value="Kotlin">
+                        <option value="Rust">
+                        <option value="TypeScript">
+                        <option value="Perl">
+                        <option value="Scala">
+                        <option value="Haskell">
+                        
+                    </datalist>
+    
+    
+                    <label for="learningStyle">Προτιμώμενος Τρόπος Μάθησης:</label>
+                    <select id="learningStyle" name="learningStyle" required>
+                        <option value="">Επιλέξτε...</option>
+                        <option value="visual">Οπτικός</option>
+                        <option value="auditory">Ακουστικός</option>
+                        <option value="kinesthetic">Κιναισθητικός</option>
+                    </select>
+    
+                    
+                </fieldset>
+            </details>
+            
+            <button type="submit">Υποβολή</button>
+        </form>
+    </main>
+
+
+    <footer>
+        <section>
+            <p>&copy; 2024 Computer Science e-learning</p>
+            <h4>Πλαίσιο λειτουργίας</h4>
+            <p>Δημιουργήθηκε από τους Θοδωρή Αικατερίνη και Βασίλειο Αυγεράκη στο πλαίσιο του μαθήματος 
+                «Τεχνολογίες και Προγραμματισμός Εφαρμογών στον Ιστό», υπό την επίβλεψη του καθηγητή Βασίλη Ζαφείρη.</p>
+            <h4>Επικοινωνία</h4>
+            <address>
+                <p>Για επικοινωνία:</p>
+            
+                <h5>Email</h5>
+                <p>
+                    Bασίλης Αυγεράκης: <a href="mailto:p3210013@aueb.gr">p3210013@aueb.gr</a><br>
+                    Θοδωρής Αικατερίνης: <a href="mailto:p3210006@aueb.gr">p3210006@aueb.gr</a>
+                </p>
+            
+                <h5>LinkedIn</h5>
+                <p>
+                    Bασίλης Αυγεράκης: <a href="https://www.linkedin.com/in/%CE%B2%CE%B1%CF%83%CE%B9%CE%BB%CE%B7%CF%82-%CE%B1%CF%85%CE%B3%CE%B5%CF%81%CE%B1%CE%BA%CE%B7%CF%82-88995b27a/" target="_blank">Προφίλ LinkedIn</a><br>
+                    Θεόδωρος Αικατερίνης: <a href="https://www.linkedin.com/in/thodoris-aikaterinis-036945311/" target="_blank">Προφίλ LinkedIn</a>
+                </p>
+            </address>
+        </section>
+    </footer>
+    
+</body>
+</html>

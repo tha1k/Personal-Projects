@@ -1,0 +1,732 @@
+#logo{
+    /*logo should have a width of 90px unless differently specified*/
+    width: 60px;
+    /*floats after at the end h1 text */
+    float: inline-end;  
+}
+
+nav>ul{
+    /*layout of the links should be in row or rows if one is not large enough*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    justify-content: space-evenly;
+    /*list of links should not be bullet points*/
+    list-style: none;
+    margin: auto;
+}    
+
+nav>ul>li{
+    /*nav list items should have 10px paddding all around*/
+    padding: 10px;
+    margin-right: auto;/*links flow better when screen expands*/
+}
+
+/*following link rules apply to header and footer links*/
+nav > ul > li > a:link, 
+footer  section  address  a:link {
+    /* (default) white without underline */
+    color: white;
+    text-decoration: none;
+}
+
+
+nav > ul > li > a:visited {
+    /*black with black dashed underline*/
+    color: black;
+    text-decoration: underline dashed;
+    text-decoration-color: black;
+}
+/*footer links when click are (underlined) grey because black is not visible*/
+footer  section  address  a:visited{
+    color: darkgray;
+    text-decoration: underline dashed;
+    text-decoration-color: darkgrey;
+}
+
+nav > ul > li > a:hover, 
+footer  section  address  a:hover{
+    /* white with white underline */
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+
+nav > ul > li > a:active {
+    /* on click white with black dashed underline */
+    color: white;
+    text-decoration: underline dashed;
+    text-decoration-color: black;
+}
+/*footer links when clicked are underlined white because black is not visible*/
+footer  section  address  a:active{
+    color: white;
+    text-decoration: underline dashed;
+    text-decoration-color: white;
+}
+
+main a:link{
+    /*links inside main should be blue by default with no underline*/
+    color:darkblue;
+    text-decoration: none;
+}
+main a:visited{
+    /*links inside main should be dark grey with the same color underline when visited*/
+    color:rgb(74, 73, 73);
+    text-decoration: underline ;
+    text-decoration-color: rgb(74, 73, 73);
+    
+}
+main a:hover{
+    /*on hover links should be dark blue with underline*/
+    color:darkblue;
+    text-decoration: underline ;
+    text-decoration-color: darkblue;
+} 
+main a:active{
+    /*on click the should be like at hover state but with dashed underline instead*/
+    color:darkblue;
+    text-decoration: dashed underline ;
+    text-decoration-color: darkblue;
+}
+
+
+/*Main content styling*/
+/*pad aread around article*/
+article{
+    font-family: Arial, sans-serif;
+    padding: 5% 5%;
+}
+/*pad sections inside articles to emphasize them as units*/
+article>section{
+    padding: 0% 2%
+}
+
+/*abbriviations, definitions and definition items should be bold and in italics*/
+abbr,dfn, dl>dt{
+    font-weight: bolder;
+    font-style: italic;
+}
+
+/*first letter in definition dd in definition list should be larger than other letters in the paragraph bold and fancy*/
+/*quotes should have fancy quotations*/
+dd>p::first-letter, p>q::before, p>q::after{
+    font-size: larger;
+    font-weight: bold;
+    font-family: "Charm", 'Playfair Display', serif;
+}
+
+/*book covers should float right */
+.book-cover{
+    float: right;
+    width: 175px;
+    height: auto;
+    /*add 2 px thick dark border with rounded corners */
+    border: 2px solid #000;
+    border-radius: 8px;
+}
+
+/* Shared box-shadow class between book-covers and lectures items*/
+.box-shadow {
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.35);
+}
+.box-shadow:hover{
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+}
+section{
+    padding: 10px 0px;
+}
+/*lecture titles should have 2 chars margin from video and be in a seperate row*/
+.lectures-header, .book-header{
+    margin-top: 3em;
+    clear:both;
+}
+
+/*excersise 3 css changes*/
+@font-face {
+    font-family: "Charm";
+    src: url("fonts/Charm-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+body{
+    background-color: #FFF; /*default background color shoulbe be completely white*/
+    font-family:sans-serif,'Segoe UI'; /*font should be sans-serif if not available Segoe UI*/
+    margin: 3px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /*3 equal width cols*/
+    grid-template-rows: auto 1fr auto; /* Three rows heights will adjust to content as needed and main content takes as much space needed */
+    /*specify alliases to cols and rows*/
+    grid-template-areas: 
+        "header header header"
+        "aside main main"
+        "footer footer footer";
+    align-items: start; /*Align items at the start within each grid-cell*/
+    gap: 10px; /*spacing betwen grid items*/
+}
+
+header{
+    /*font is size 20 and background color is darkish navy blue */
+    padding: 10px;
+    font-size: 20px;
+    background-color: #1a3959;
+    /*palce in header area*/
+    grid-area: header;
+}
+aside{
+    /*aside is a little darker than main*/
+    background-color: #FAFAFA;
+    /*float on the left side of main content taking 25% of the bodies elememt screen real-estate*/
+    width:fit-content;
+    float: left;  
+    /*pad with 10 px from other elements (body and main */              
+    padding: 10px;
+    position: sticky;
+    top: 10px; /* when it starts to leave the screen sticks to the top */
+    align-self: start; /*adjust to start of the cell*/
+    /*block fits content and has max width of 25 characters what does not fit in the screen remains visible*/
+    height: fit-content;
+    overflow-y: visible;
+    max-width: 25em;
+    font-family: "Charm";
+   
+}
+main{
+    /*main in main grid area*/
+   grid-area: main;    
+}
+
+footer{
+    /*footer in the footer of the grid*/
+    grid-area: footer;
+    
+    /*background and float settings*/
+    font-size: 14px;
+    color: #FAFAFA;
+    background-color: #1A252F;
+    clear: both;
+
+    display: grid;
+    /*center col is where the content is*/
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+footer>section {
+    /*footer content is centered and in columns*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    /*content in the middle col of the footer grid*/
+    grid-column: 2 / 3;
+}
+.main-without-asidenav{
+    /*when there isn't a side nav main content should span entire side main main row*/
+    grid-column: 1 / 4;
+}
+
+.main-without-asidenav>article{
+    /*articles should be centered and in a column*/
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center; 
+}
+
+#categories-container>dl{
+    /*categories should be in the same row if possible if not they should wrap to another row*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*items should have space-around them when 1 element in a row it looks centered*/
+    justify-content: space-around;
+}
+
+.main-without-asidenav>article>ol{
+    /*same principles as #categories-container>dl selector*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.lectures{
+    float:left;
+    /*t , r , b , l*/
+    margin: 0px 10px 15px 0px;
+    position: relative; 
+    /*bound width of videos to the width of its parent*/
+    max-width: 25em;
+}
+
+body > main > article > ol > li{
+    max-width: 25em;
+    margin: 10px;
+}
+
+#categories-container>dl>section{
+   max-width: 25em;
+}
+
+.side-scroll-container {
+    /*a div so that aside sticky does not go underneath footer*/
+    grid-area: aside;
+    height: 100%;
+}
+
+#team-overview + main>article{ 
+    /*style about us articles so the text looks aligned to the left*/   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+#java-book{
+    
+    display: flex;
+    flex-direction: column;
+    /*text is aligned to the start of each block*/
+    align-items: start;
+}
+#java-book > section > h2{
+    background-color: #FAFAFA;
+    /*sticky headers just thought the effect looks cool especially if there was more content*/
+    position: sticky;
+    top: 10px;
+    font-family: "Charm", sans-serif;
+
+}
+.ood-lecture>section {
+    padding: 0% 2%;
+    /*lecture items have their own row and are centered nicely */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.ood-lecture{
+    /*lecture sections are now align to the start and in columnss*/
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+}
+#java-book > section {
+    max-width: 100em;
+}
+#java-book > section:nth-child(3) > img{
+    /*image size bound to parent and offset 4chars to the right nice liquid design detail*/
+ max-width: 80%;
+ position: relative;
+ left:4em;
+}
+.profiles{
+    /* profile images float to the left of the text with padding on both sides that are near text */
+    float: left;
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+#java_video_3{
+    /* padding to allow all video titles and players to be aligned */
+    padding-bottom: 21px;
+}
+.about_us_grid{
+    /* created a grid to order the different profiles and profiles description */
+    display: grid;
+    grid-template-columns: 2fr;
+}
+/*image category should be floating to the right and have a width of 125 px while also maintaning aspect ratio*/
+.category-image{
+    float: right;
+    width: 125px;
+    height: auto;
+    /*the also should have*/
+}
+/*fancy first letter*/
+article>article>section> p::first-letter{
+    font-size: larger;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+}
+/*css for tablet/ sizes ranging from 601 pixels to 1024 pixels*/
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        /* 2 column 3 row grid for tablets */
+        grid-template-columns: 1fr 0.3fr;
+        grid-template-areas: 
+            "header header"
+            "main aside"
+            "footer footer";
+    }
+    #logo{
+        /* smaller logo */
+        width: 45px;
+    }
+    header{
+        /* smaller header text */
+        font-size: 85%;
+    }
+    aside {
+        /* smaller aside text */
+        font-size: 85%;
+    }
+    article{
+        /* smaller article text */
+        font-size: 85%;
+    }
+    nav>ul{
+        /* creating space between header elements and the navigation bar */
+        margin: 10px;
+    }  
+    #categories-container>dl>section{
+        /* restricting the maximum width of the categories containers */
+        max-width: 20em;
+    }
+    body > main > article > ol > li{
+        /* restricting max width of list elements and creating space between the list elements and other body elements */
+        max-width: 18em;
+        margin: 15px;
+    }
+    .book-cover{
+        /* book cover images float to the right of text with standard size */
+        float: right;
+        width: 100px;
+        height: auto;
+        /*add 2 px thick dark border with rounded corners */
+        border: 2px solid #000;
+        border-radius: 8px;
+    }
+    iframe {
+        /* adjusting the video player size */
+        width: 260px;
+        height: 210px;
+    }
+    .profiles{
+        /* profile pictures capture screen area according to the current screen size */
+        max-width: 75vw;
+    }
+    .tbl_head{
+        /* aligning some video headers to look cohesive */
+        padding-bottom: 18px;
+    }
+
+    /*TODO make nav a grid*/
+    nav>ul{
+        /*layout of the links should be in row or rows if one is not large enough*/
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(25em , auto));
+        list-style: none;
+        margin: auto;
+    }
+}
+
+/*css for phone/ sizes of 600px in width and smaller*/
+@media (max-width: 600px) {
+    .profiles{
+        /* profile pictures capture the entire screen area */
+        max-width: 100vw;
+    }
+    body {
+        /* 1 column 4 row layout for phone screens */
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "header"
+            "aside"
+            "main"
+            "footer";
+    }
+    aside {
+        /* aside has a width that covers the entire screen with bigger text */
+        max-width: 100%;
+        font-size: 110%;
+        text-align: center;
+    }
+    #logo{
+        /* smaller than the original logo */
+        width: 45px;
+    }
+    header{
+        /* header text adjustment for better readability */
+        font-size: 100%;
+        width: 100%;
+    }
+    header > h1{
+        /* bigger header */
+        font-size: 190%;
+    }
+    article{
+        /* adjusting text size for readability */
+        font-size: 100%;
+    }
+    nav>ul{
+        /* creating space between navigation bar elements and other header elements */
+        margin: 10px;
+    }  
+    #categories-container>dl>section{
+        /* restricting categories containers size */
+        max-width: 20em;
+    }
+    body > main > article > ol > li{
+        /* adjusting list elements sizes and spacing from other elements */
+        max-width: 100%;
+        margin: 19px;
+    }
+    .book-cover{
+        /* same as tablet */
+        float: right;
+        width: 100px;
+        height: auto;
+        border: 2px solid #000;
+        border-radius: 8px;
+    }
+    iframe {
+        /* adjusting video player size */
+        width: 460px;
+        height: 310px;
+    }
+    #pinakas_biblio{
+        /* adjusting the book context table to expand the entire screen width and center it's text */
+        width: 100vw;
+        text-align: center;
+    }
+
+    
+}
+
+#menu-toggle {
+    display: none; /* Hide the button */
+}
+
+#menu-label{
+    display: none;
+}
+
+
+
+/* Show the navigation menu for larger screens */
+@media (max-width: 600px) {
+   /*hide nav list */
+    #nav-list >li{
+        display: none;
+    }
+    /*style menu hamburger label*/
+    #menu-label {
+        display: block;
+        background-color: #1a3959;;
+        color: white;
+        padding: 10px;
+        font-size: 18px;
+        text-align: start;
+        cursor: pointer;
+    }
+    
+    /*toggle nav list expansion*/
+    #menu-toggle:checked ~ #nav-list >li {
+        display: block;
+        min-height: 0vh;
+        animation: expand 0.4s linear forwards;
+    }
+    /*expansion animation*/
+    @keyframes expand {
+        0% {
+            height: 0vh;
+        }
+        25%{
+            height: 0.2em;
+        }
+        50%{
+            height:0.8em;
+        }
+        75%{
+            height:1.1em;
+        }
+        100% {
+            height: fit-content;
+        }
+        
+    }
+
+    
+    /*paint drop down icon lines*/
+    .menu-icon .line {
+        stroke: #000;
+        stroke-width: 5;
+        stroke-linecap: round;
+        /* transition: transform 0.3s ease, opacity 0.3s ease; */
+    }
+    
+    /* Animation effect to turn Ξ(open menu into close menu */
+    @keyframes cris-cross-top {
+        0% {
+            transform: rotate(0deg) translate(0, 0);
+        }
+        100% {
+            transform: rotate(45deg) translate(30px, -30px);
+        }
+    }
+    
+    @keyframes cris-cross-bottom {
+        0% {
+            transform: rotate(0deg) translate(0, 0);
+        }
+        100% {
+            transform: rotate(-45deg) translate(-50px, 30px);
+        }
+    }
+    
+    @keyframes fade-out {
+        0% {
+            opacity: 1;
+        }
+        75%{
+            opacity: 0.1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes fade-in {
+        0% {
+            opacity: 0;
+        }
+        25%{
+            opacity: 0.1;
+        }
+        100% {
+            opacity: 1;
+        }
+        
+    }
+    /*from X to Ξ*/
+    @keyframes cris-cross-top-be-burger {
+        0% {
+            transform: rotate(45deg) translate(30px, -30px);
+        }
+        100% {
+            
+            transform: rotate(0deg) translate(0, 0);
+        }
+    }
+    
+    @keyframes cris-cross-bottom-be-burger {
+        0% {
+            
+            transform: rotate(-45deg) translate(-50px, 30px);
+        }
+        100% {
+            transform: rotate(0deg) translate(0, 0);
+        }
+    }
+
+    /*Ξ(hamburger icon) το X(close icon)*/
+    #menu-toggle:checked + #menu-label > svg > line:nth-child(1) {
+        animation: cris-cross-top 0.8s linear  forwards;
+    }
+    
+    #menu-toggle:checked + #menu-label > svg > line:nth-child(2) {
+        animation: cris-cross-bottom 0.8s linear forwards;
+    }
+    
+    #menu-toggle:checked + #menu-label > svg > line:nth-child(3) {
+        animation: fade-out 0.5s linear forwards;
+    }
+    
+    /* When the checkbox is unchecked, animations reverse */
+    #menu-toggle:not(:checked) + #menu-label > svg > line:nth-child(1) {
+        animation: cris-cross-top-be-burger 0.8s linear forwards;
+    }
+    
+    #menu-toggle:not(:checked) + #menu-label > svg > line:nth-child(2) {
+        animation: cris-cross-bottom-be-burger 0.8s linear forwards;
+    }
+    
+    #menu-toggle:not(:checked) + #menu-label > svg > line:nth-child(3) {
+        animation: fade-in  linear forwards;
+    }
+        
+}
+
+/*ex5 last details and form styling*/ 
+
+/*centered headings*/
+h1 {
+    text-align: center; 
+}
+
+/*contact form page doesnt have aside is centered on the screen and liquid design helps with mobile responsiveness*/
+#contact_form {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    /*round and shaded modern look*/
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    grid-column: 1/-1;
+    
+}
+
+/*form is always one column*/
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+fieldset {
+    /*input group with round borders*/
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+/*form elements should take the entire row and be padded and rounded*/
+input, select, textarea, button {
+    font-size: 16px;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+/*if error in input border turns red*/
+
+input:user-invalid {
+    border-color: red;
+}
+
+input:user-valid {
+    border-color: green;
+}
+#opt_in{  
+    /*user selection to be included in an email list*/  
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+    /*size radio button */
+    align-items: baseline;
+}
+
+/*blue button with white letters */
+button {
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    
+    cursor: pointer;
+}
+
+/*emphasize button on hover*/
+button:hover {
+    background: #0056b3;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+

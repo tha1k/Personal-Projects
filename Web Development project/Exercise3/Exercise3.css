@@ -1,0 +1,327 @@
+#logo{
+    /*logo should have a width of 90px unless differently specified*/
+    width: 60px;
+    /*floats after at the end h1 text */
+    float: inline-end;  
+}
+
+nav>ul{
+    /*layout of the links should be in row or rows if one is not large enough*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    justify-content: space-evenly;
+    /*list of links should not be bullet points*/
+    list-style: none;
+    margin: auto;
+}    
+
+nav>ul>li{
+    /*nav list items should have 10px paddding all around*/
+    padding: 10px;
+    margin-right: auto;/*links flow better when screen expands*/
+}
+
+/*following link rules apply to header and footer links*/
+nav > ul > li > a:link, 
+footer  section  address  a:link {
+    /* (default) white without underline */
+    color: white;
+    text-decoration: none;
+}
+
+
+nav > ul > li > a:visited {
+    /*black with black dashed underline*/
+    color: black;
+    text-decoration: underline dashed;
+    text-decoration-color: black;
+}
+/*footer links when click are (underlined) grey because black is not visible*/
+footer  section  address  a:visited{
+    color: darkgray;
+    text-decoration: underline dashed;
+    text-decoration-color: darkgrey;
+}
+
+nav > ul > li > a:hover, 
+footer  section  address  a:hover{
+    /* white with white underline */
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+
+nav > ul > li > a:active {
+    /* on click white with black dashed underline */
+    color: white;
+    text-decoration: underline dashed;
+    text-decoration-color: black;
+}
+/*footer links when clicked are underlined white because black is not visible*/
+footer  section  address  a:active{
+    color: white;
+    text-decoration: underline dashed;
+    text-decoration-color: white;
+}
+
+main a:link{
+    /*links inside main should be blue by default with no underline*/
+    color:darkblue;
+    text-decoration: none;
+}
+main a:visited{
+    /*links inside main should be dark grey with the same color underline when visited*/
+    color:rgb(74, 73, 73);
+    text-decoration: underline ;
+    text-decoration-color: rgb(74, 73, 73);
+    
+}
+main a:hover{
+    /*on hover links should be dark blue with underline*/
+    color:darkblue;
+    text-decoration: underline ;
+    text-decoration-color: darkblue;
+} 
+main a:active{
+    /*on click the should be like at hover state but with dashed underline instead*/
+    color:darkblue;
+    text-decoration: dashed underline ;
+    text-decoration-color: darkblue;
+}
+
+
+/*Main content styling*/
+/*pad aread around article*/
+article{
+    font-family: Arial, sans-serif;
+    padding: 5% 5%;
+}
+/*pad sections inside articles to emphasize them as units*/
+article>section{
+    padding: 0% 2%
+}
+
+/*abbriviations, definitions and definition items should be bold and in italics*/
+abbr,dfn, dl>dt{
+    font-weight: bolder;
+    font-style: italic;
+}
+
+/*first letter in definition dd in definition list should be larger than other letters in the paragraph bold and fancy*/
+/*quotes should have fancy quotations*/
+dd>p::first-letter, p>q::before, p>q::after{
+    font-size: larger;
+    font-weight: bold;
+    font-family: "Charm", 'Playfair Display', serif;
+}
+
+/*book covers should float right */
+.book-cover{
+    float: right;
+    width: 175px;
+    height: auto;
+    /*add 2 px thick dark border with rounded corners */
+    border: 2px solid #000;
+    border-radius: 8px;
+}
+
+/* Shared box-shadow class between book-covers and lectures items*/
+.box-shadow {
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.35);
+}
+.box-shadow:hover{
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+}
+section{
+    padding: 10px 0px;
+}
+/*lecture titles should have 2 chars margin from video and be in a seperate row*/
+.lectures-header, .book-header{
+    margin-top: 3em;
+    clear:both;
+}
+
+/*excersise 3 css changes*/
+@font-face {
+    font-family: "Charm";
+    src: url("fonts/Charm-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+body{
+    background-color: #FFF; /*default background color shoulbe be completely white*/
+    font-family:sans-serif,'Segoe UI'; /*font should be sans-serif if not available Segoe UI*/
+    margin: 3px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /*3 equal width cols*/
+    grid-template-rows: auto 1fr auto; /* Three rows heights will adjust to content as needed and main content takes as much space needed */
+    /*specify alliases to cols and rows*/
+    grid-template-areas: 
+        "header header header"
+        "aside main main"
+        "footer footer footer";
+    align-items: start; /*Align items at the start within each grid-cell*/
+    gap: 10px; /*spacing betwen grid items*/
+}
+
+header{
+    /*font is size 20 and background color is darkish navy blue */
+    padding: 10px;
+    font-size: 20px;
+    background-color: #1a3959;
+    /*palce in header area*/
+    grid-area: header;
+}
+aside{
+    /*aside is a little darker than main*/
+    background-color: #FAFAFA;
+    /*float on the left side of main content taking 25% of the bodies elememt screen real-estate*/
+    width: fit-content;
+    float: left;  
+    /*pad with 10 px from other elements (body and main */              
+    padding: 10px;
+    position: sticky;
+    top: 10px; /* when it starts to leave the screen sticks to the top */
+    align-self: start; /*adjust to start of the cell*/
+    /*block fits content and has max width of 25 characters what does not fit in the screen remains visible*/
+    height: fit-content;
+    overflow-y: visible;
+    max-width: 25em;
+    font-family: "Charm";
+   
+}
+main{
+    /*main in main grid area*/
+   grid-area: main;    
+}
+
+footer{
+    /*footer in the footer of the grid*/
+    grid-area: footer;
+    
+    /*background and float settings*/
+    font-size: 14px;
+    color: #FAFAFA;
+    background-color: #1A252F;
+    clear: both;
+
+    display: grid;
+    /*center col is where the content is*/
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+footer>section {
+    /*footer content is centered and in columns*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    /*content in the middle col of the footer grid*/
+    grid-column: 2 / 3;
+}
+.main-without-asidenav{
+    /*when there isn't a side nav main content should span entire side main main row*/
+    grid-column: 1 / 4;
+}
+
+.main-without-asidenav>article{
+    /*articles should be centered and in a column*/
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center; 
+}
+
+#categories-container>dl{
+    /*categories should be in the same row if possible if not they should wrap to another row*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*items should have space-around them when 1 element in a row it looks centered*/
+    justify-content: space-around;
+}
+
+.main-without-asidenav>article>ol{
+    /*same principles as #categories-container>dl selector*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.lectures{
+    float:left;
+    /*t , r , b , l*/
+    margin: 0px 10px 15px 0px;
+    position: relative; 
+    /*bound width of videos to the width of its parent*/
+    max-width: 25em;
+}
+
+body > main > article > ol > li{
+    max-width: 25em;
+}
+
+#categories-container>dl>section{
+   max-width: 25em;
+}
+
+.side-scroll-container {
+    /*a div so that aside sticky does not go underneath footer*/
+    grid-area: aside;
+    height: 100%;
+}
+
+#team-overview + main>article{ 
+    /*style about us articles so the text looks aligned to the left*/   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+#java-book{
+    
+    display: flex;
+    flex-direction: column;
+    /*text is aligned to the start of each block*/
+    align-items: start;
+}
+#java-book > section > h2{
+    background-color: #FAFAFA;
+    /*sticky headers just thought the effect looks cool especially if there was more content*/
+    position: sticky;
+    top: 10px;
+    font-family: "Charm", sans-serif;
+
+}
+.ood-lecture>section {
+    padding: 0% 2%;
+    /*lecture items have their own row and are centered nicely */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.ood-lecture{
+    /*lecture sections are now align to the start and in columnss*/
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+}
+#java-book > section {
+    max-width: 100em;
+}
+#java-book > section:nth-child(3) > img{
+    /*image size bound to parent and offset 4chars to the right nice liquid design detail*/
+ max-width: 80%;
+ position: relative;
+ left:4em;
+}
+
+
