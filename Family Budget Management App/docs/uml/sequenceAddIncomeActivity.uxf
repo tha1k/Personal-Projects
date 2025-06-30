@@ -1,0 +1,122 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>Text</id><coordinates><x>140</x><y>10</y><w>200</w><h>80</h></coordinates><panel_attributes>// Boundary Element
+	     AddIncomeActivity
+View
+customelement=
+// Boundary Symbol
+drawCircle(50, 50, 20)
+drawLine(20, 50, 30, 50)
+drawLine(20, 30, 20, 70)
+	</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>330</x><y>90</y><w>220</w><h>80</h></coordinates><panel_attributes>// Control Element
+	     AddIncomePresenter
+
+customelement=
+// Control Symbol
+drawCircle(50, 50, 20)
+drawLine(44, 31, 54, 21)
+drawLine(44, 31, 54, 41)
+	</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>70</y><w>30</w><h>1080</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;1060</additional_attributes></element><element><id>Relation</id><coordinates><x>10</x><y>90</y><w>190</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+familymember_id</panel_attributes><additional_attributes>170;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>190</x><y>130</y><w>190</w><h>30</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>170;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>10</x><y>160</y><w>190</w><h>90</h></coordinates><panel_attributes>lt=&lt;-
+double amount, 
+boolean recurring
+LocalDate startDate
+LocalDate endDate
+String description</panel_attributes><additional_attributes>170;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>190</x><y>200</y><w>200</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+onSave(money,recurring,
+startDate, endDate, desc)</panel_attributes><additional_attributes>180;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>370</x><y>150</y><w>30</w><h>1000</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;980</additional_attributes></element><element><id>Text</id><coordinates><x>520</x><y>150</y><w>90</w><h>80</h></coordinates><panel_attributes>// Entity Element
+	     Money
+customelement=
+// Entity Symbol
+drawCircle(50, 50, 20)
+drawLine(30, 70, 70, 70)
+	</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>240</y><w>200</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+</panel_attributes><additional_attributes>180;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>560</x><y>210</y><w>30</w><h>940</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;920</additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>290</y><w>200</w><h>50</h></coordinates><panel_attributes>lt=&lt;.
+money
+</panel_attributes><additional_attributes>10;20;180;20</additional_attributes></element><element><id>Text</id><coordinates><x>660</x><y>200</y><w>120</w><h>80</h></coordinates><panel_attributes>// Entity Element
+FamilyMember_DAO
+customelement=
+// Entity Symbol
+drawCircle(50, 50, 20)
+drawLine(30, 70, 70, 70)
+	</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>190</x><y>330</y><w>530</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+find(id)</panel_attributes><additional_attributes>510;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>700</x><y>260</y><w>30</w><h>890</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;870</additional_attributes></element><element><id>Relation</id><coordinates><x>190</x><y>360</y><w>530</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+member</panel_attributes><additional_attributes>10;20;510;20</additional_attributes></element><element><id>Relation</id><coordinates><x>190</x><y>410</y><w>640</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+</panel_attributes><additional_attributes>620;20;10;20</additional_attributes></element><element><id>Text</id><coordinates><x>770</x><y>330</y><w>120</w><h>80</h></coordinates><panel_attributes>// Entity Element
+        Income
+customelement=
+// Entity Symbol
+drawCircle(50, 50, 20)
+drawLine(30, 70, 70, 70)
+	</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>810</x><y>400</y><w>30</w><h>750</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;730</additional_attributes></element><element><id>Relation</id><coordinates><x>190</x><y>440</y><w>640</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+income</panel_attributes><additional_attributes>10;20;620;20</additional_attributes></element><element><id>Relation</id><coordinates><x>190</x><y>500</y><w>740</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+addIncome(income)</panel_attributes><additional_attributes>720;20;10;20</additional_attributes></element><element><id>Text</id><coordinates><x>870</x><y>330</y><w>120</w><h>80</h></coordinates><panel_attributes>// Entity Element
+       Member
+customelement=
+// Entity Symbol
+drawCircle(50, 50, 20)
+drawLine(30, 70, 70, 70)
+	</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>910</x><y>390</y><w>30</w><h>760</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;740</additional_attributes></element><element><id>Relation</id><coordinates><x>190</x><y>540</y><w>830</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+save(income)</panel_attributes><additional_attributes>810;20;10;20</additional_attributes></element><element><id>Text</id><coordinates><x>960</x><y>330</y><w>120</w><h>80</h></coordinates><panel_attributes>// Entity Element
+        Income_DAO
+customelement=
+// Entity Symbol
+drawCircle(50, 50, 20)
+drawLine(30, 70, 70, 70)
+	</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1000</x><y>400</y><w>30</w><h>750</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;730</additional_attributes></element><element><id>Relation</id><coordinates><x>190</x><y>620</y><w>200</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+successAdd("Successfuly 
+registered income)</panel_attributes><additional_attributes>10;20;180;20</additional_attributes></element><element><id>UMLFrame</id><coordinates><x>90</x><y>410</y><w>980</w><h>620</h></coordinates><panel_attributes>opt 
+--
+attachedId==-1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--
+
+
+
+
+
+attachedId=id
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>190</x><y>690</y><w>830</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+find(id)</panel_attributes><additional_attributes>810;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>190</x><y>730</y><w>830</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+income</panel_attributes><additional_attributes>10;20;810;20</additional_attributes></element><element><id>Relation</id><coordinates><x>190</x><y>790</y><w>640</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+income.setIsRecurring(isRecurring)
+</panel_attributes><additional_attributes>620;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>190</x><y>830</y><w>640</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+income.setRegistrationDate(regdate)
+</panel_attributes><additional_attributes>620;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>190</x><y>870</y><w>640</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+income.setEndDate(endDate, regdate)
+</panel_attributes><additional_attributes>620;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>190</x><y>910</y><w>640</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+income.setMoney(amount)
+</panel_attributes><additional_attributes>620;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>190</x><y>950</y><w>640</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+income.setDescription(description)
+</panel_attributes><additional_attributes>620;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>150</x><y>980</y><w>280</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+successEdit("Updated income " + attachedId,
+ this.attachedId)</panel_attributes><additional_attributes>50;20;220;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>180</x><y>90</y><w>20</w><h>920</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>370</x><y>210</y><w>20</w><h>840</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>700</x><y>330</y><w>20</w><h>70</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>810</x><y>780</y><w>20</w><h>220</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>560</x><y>240</y><w>20</w><h>100</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>810</x><y>420</y><w>20</w><h>50</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>910</x><y>500</y><w>20</w><h>50</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>1000</x><y>540</y><w>20</w><h>50</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>1000</x><y>690</y><w>20</w><h>70</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element></diagram>

@@ -1,0 +1,521 @@
+<diagram program="umletino" version="15.1"><zoom_level>6</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>486</x><y>588</y><w>210</w><h>264</h></coordinates><panel_attributes>Family
+--
+-family_name: String
+-hmeromhnia_eggrafhs: LocalDateTime
+-disposable_income: Money
+-total_income: Money
+-total_expenses: Money
+-total_savings: Money
+--
++getProtector(): Family_Member
++setProtector(Family_Member member) 
++getMembers(): Set
++getFamilyName(): String
++setFamilyName(String name)
++getRegisterDate(): LocalDateTime
++setRegisterDate(LocalDateTime date)
++getDisposableIncome(): Money
++setDisposableIncome(Money money)
++getTotalIncome(): Money
++setTotalIncome(Money money)
++getTotalExpenses(): Money
++setTotalExpenses(Money money)
++getTotalSavings(): Money
++setTotalSavings(Money money)
++addFamilyMember(Family_Member member)
++removeFamilyMember(Family_Member member)
++printFamilyMembers()
++printStats()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>558</x><y>1080</y><w>144</w><h>108</h></coordinates><panel_attributes>Date_Range
+--
+-startDate : LocalDate
+-endDate : LocalDate
+--
++getStartDate(): LocalDate
++getEndDate(): LocalDate
++setStartDate(LocalDate startDate)
++setEndDate(LocalDate endDate)
++totalDaysUntil(): int
++equals(Obejct other): boolean
++hashCode(): int
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1188</x><y>600</y><w>126</w><h>90</h></coordinates><panel_attributes>Money_alloc
+--
+-amount : Money 
+-transactionDate : LocalDate 
+--
++getAmount(): Money {query}
++setAmount(Money m )
++getDate(): LcoalDate {query}
++equals(Object other): boolean
++hashCode(): int </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>588</x><y>882</y><w>162</w><h>168</h></coordinates><panel_attributes>Money
+--
+- amount : BigDecimal 
+- currency: Currency
+--
++getAmount(): BigDecimal {query}
++getCurrency(): Currency {query}
++plus(Money other): Money
++minus(Money other): Money
++times(long factor): Money
++divide(BigDecimal divisor): Money
++divide(long divisor): Money
+-checkForSameCurrencies(Money other)
+_+euros(BigDecimal amount): Money_
+_+euros(long amount): Money_
++equals(Object other): boolean 
++hashCode(): int
++toString(): String 
+
+
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>810</x><y>594</y><w>228</w><h>336</h></coordinates><panel_attributes>Family_member
+--
+-name: String
+-username: String
+-password: String
+-disposable_income: Money
+--
++is_protector: boolean
++getName(): String
++setName(String name)
++getUsername(): String
++setUsername(String username)
++getPassword(): String
++setPassword(String password)
++Is_protector(): boolean
++setIs_protector(boolean is_protector)
++getPiggy_banks(): Set&lt;Piggy_bank&gt;
++addPiggy_bank(Piggy_bank piggy)
++remove_bank(Piggy_bank piggy)
++allocate_money(Money amount, Piggy_bank pg)
++revert_allocate_money(Money amount, Piggy_bank pg)
++get_member_savings(): Money
++addIncome(Income inc)
++removeIncome(Income inc)
++getIncome(): Set&lt;Income&gt;
++addExpense(Expense exp)
++removeExpense(Expense exp)
++getExpenses(): Set&lt;Expense&gt;
++withdraw_from_piggy_bank(Piggy_bank pg, Money amount)
++getDisposableIncome(): Money
++setDisposableIncome(Money m)
++getTotalIncome(): Money
++getTotalExpenses(): Money
++addToDisposableIncome(Money m)
++retractFromDisposableIncome(Money m)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1032</x><y>984</y><w>210</w><h>192</h></coordinates><panel_attributes>Transactions
+--
+-money: Money
+-isReccuring: boolean
+-registrationDate: LocalDate
+-endDate: LocalDate
+effective: Date_Range
+-description: String 
+--
++setMoney(Money money)
++getMoney(): Money
++setIsRecurring(boolean isRecurring)
++getIsRecurring(): boolean
++setRegistrationdate(LocalDate registrationdate)
++getRegistrationDate(): LocalDate
++setEndDate(LocalDate endDate, LocalDate registrationDate)
++getEndDate(): LocalDate
++getEffectiveRange(): int
++setDescription(String description)
++getDescription(): String
++toString(): String 
++equals(Object other): boolean
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1098</x><y>852</y><w>126</w><h>42</h></coordinates><panel_attributes>Expense
+--
+
+--
++toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>900</x><y>1122</y><w>150</w><h>66</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>230;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1134</x><y>888</y><w>60</w><h>108</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>80;160;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1272</x><y>822</y><w>186</w><h>252</h></coordinates><panel_attributes>Piggy_banks
+--
+-name: String
+-description: String 
+-Initial_goal: Money 
+- allocated_amount: Money
+--
++getname(): String  {query}
++setname(String name)
++setDescritption(String a) 
++getDescription(): String {query}
++setInitialgoal(Money initial_goal)
++getInitial_goal(): Money  {query}
++get_remaining_amount(): Money 
++get_allocated_amount(): Money
++set_allocated_amount(): Money 
++allocate_money(Money m )
+-remove_allocation(Money_alloc m)
++remove_money(Money m )
++withdraw_all(): Money
++withdraw(Money m )
++get_allocations(): List&lt;Money_alloc&gt;{query}
++get_owner(): Family_Member {query}
++ set_owner(Family_Member f)
++setAllocations(List&lt;Money_alloc&gt; allocations)
++equals(Obejct other): boolean
++hashCode(): int
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1248</x><y>684</y><w>96</w><h>150</h></coordinates><panel_attributes>lt=&lt;-
+m1=-allocations *
+m2= 1
+has allocs &gt;</panel_attributes><additional_attributes>10;10;140;230</additional_attributes></element><element><id>Relation</id><coordinates><x>1032</x><y>618</y><w>252</w><h>234</h></coordinates><panel_attributes>lt=&lt;-&gt;
+m1=+owner 0..1
+m2= * -piggy_banks
+has piggy_banks &gt;</panel_attributes><additional_attributes>10;10;400;370</additional_attributes></element><element><id>UMLClass</id><coordinates><x>780</x><y>1116</y><w>126</w><h>42</h></coordinates><panel_attributes>Income
+--
+
+--
++toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>792</x><y>924</y><w>54</w><h>204</h></coordinates><panel_attributes>lt=-&gt;
+m1=1
+m2= * incomes
+earns &gt;</panel_attributes><additional_attributes>40;10;10;320</additional_attributes></element><element><id>Relation</id><coordinates><x>1032</x><y>696</y><w>114</w><h>174</h></coordinates><panel_attributes>lt=-&gt;
+m1=1
+m2= * expenses
+spends &gt;</panel_attributes><additional_attributes>10;10;110;270</additional_attributes></element><element><id>Relation</id><coordinates><x>690</x><y>642</y><w>132</w><h>36</h></coordinates><panel_attributes>lt=-&gt;
+m1=1
+m2= 1..* members
+has &gt;</panel_attributes><additional_attributes>10;10;200;30</additional_attributes></element><element><id>Relation</id><coordinates><x>690</x><y>684</y><w>132</w><h>36</h></coordinates><panel_attributes>lt=-&gt;
+m1=1
+m2= 1 protector
+is protected by  &gt;</panel_attributes><additional_attributes>10;10;200;30</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1464</x><y>1332</y><w>150</w><h>108</h></coordinates><panel_attributes>AddMoneyAllocationActivity
+--
+# onCreate(Bundle savedInstanceState)
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1548</x><y>1164</y><w>150</w><h>108</h></coordinates><panel_attributes>"Interface"
+AddMoneyAllocationView
+--
+Show_message(String msg )
+suceessful_allocation(int id)
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1476</x><y>1266</y><w>84</w><h>78</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>120;10;10;110</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1692</x><y>1326</y><w>150</w><h>108</h></coordinates><panel_attributes>AddMoneyAllocationPresenter
+--
+    -pgd : Piggy_Bank_DAO 
+    -md : Money_alloc_DAO 
+    -fmd : Family_Member_DAO 
+    -id : int 
+--
++setId(Integer Id) 
++getId(): Integer
++onSave()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1608</x><y>1368</y><w>96</w><h>30</h></coordinates><panel_attributes>lt=&lt;-
+m1=-presenter
+</panel_attributes><additional_attributes>140;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1686</x><y>1266</y><w>84</w><h>72</h></coordinates><panel_attributes>lt=&lt;-
+m1=-view
+
+</panel_attributes><additional_attributes>10;10;120;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2058</x><y>630</y><w>150</w><h>108</h></coordinates><panel_attributes>"InterFace"
+ManageAllocationView
+--
+Show_message(String msg)
+addMoneyAlloc(int id)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1938</x><y>846</y><w>174</w><h>150</h></coordinates><panel_attributes>ManageMoneyAllocationActivity
+--
+# onCreate(Bundle savedInstanceState)
+ - rc: RecyclerView
+    - edtDateFrom: EditText
+    - edtDateTo: EditText
+_-ALLOCED_ :int 
+_- FILTERED: int
+
+--
+    + onCreate(savedInstanceState: Bundle): void
+    + onActivityResult(requestCode: int, resultCode: int, data: Intent): void
+    + Show_message(msg: String): void
+    + addMoneyAlloc(id: int): void
+
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2496</x><y>846</y><w>180</w><h>156</h></coordinates><panel_attributes>ManageMoneyAllocationPresenter
+--
+    - fmd: Family_Member_DAO
+    - fd: Family_DAO
+    - pdg: Piggy_Bank_DAO
+    - bank_id: int
+    - pg: Piggy_bank
+- allocs: List&lt;Money_alloc&gt;
+
+--
++ setView(v: ManageAllocationsView): void
++ setId(id: int): void
++ get_allocations_list(): List&lt;Money_alloc&gt;
++ filter_allocs(start: String, end: String): List&lt;Money_alloc&gt;
++ validate_format(date1: String): boolean
++ add_alloc(): void
+- initDAOs(): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2106</x><y>906</y><w>90</w><h>24</h></coordinates><panel_attributes>lt=&lt;-
+m1=-viewModel</panel_attributes><additional_attributes>130;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>2166</x><y>732</y><w>342</w><h>132</h></coordinates><panel_attributes>lt=&lt;-
+m1=-view
+
+</panel_attributes><additional_attributes>10;10;550;200</additional_attributes></element><element><id>Relation</id><coordinates><x>1986</x><y>732</y><w>84</w><h>126</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>120;10;10;190</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2184</x><y>870</y><w>132</w><h>66</h></coordinates><panel_attributes>AddMoneyAllocationViewModel
+--
+
++getPresenter():  ManageMoneyAllocationsPresenter 
++onCleared() 
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2088</x><y>912</y><w>78</w><h>120</h></coordinates><panel_attributes>lt=&lt;-
+m1=-adapter</panel_attributes><additional_attributes>60;180;70;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1302</x><y>630</y><w>672</w><h>228</h></coordinates><panel_attributes>lt=&lt;-
+m1=*-allocations</panel_attributes><additional_attributes>10;10;1050;140;1100;360</additional_attributes></element><element><id>Relation</id><coordinates><x>1308</x><y>648</y><w>720</w><h>402</h></coordinates><panel_attributes>lt=&lt;-
+m1=*-allocations</panel_attributes><additional_attributes>10;10;1030;180;1180;650</additional_attributes></element><element><id>Relation</id><coordinates><x>2310</x><y>900</y><w>198</w><h>24</h></coordinates><panel_attributes>lt=&lt;-
+m1=-presenter </panel_attributes><additional_attributes>310;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1338</x><y>1722</y><w>240</w><h>108</h></coordinates><panel_attributes>DetailsPiggyBankActivity
+--
+# onCreate(Bundle savedInstanceState)
+#onResume()
+#onActivityResult(int requestCode, int resultCode, Intent data)
+-updateProgressBar(int savedAmount, int goalAmount)
++removeBank(int index )
++editBank(int id)
++see_allocs(int id)
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1422</x><y>1554</y><w>150</w><h>108</h></coordinates><panel_attributes>"Interface"
+DetailsPiggyBankView
+
+--
+Show_message(String msg )
+removeBank(int index )
+editBank(int id)
+see_allocs(int id)
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1350</x><y>1656</y><w>84</w><h>78</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>120;10;10;110</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1668</x><y>1716</y><w>162</w><h>216</h></coordinates><panel_attributes>DetailsPiggyBankPresenter
+--
+-pgd : Piggy_Bank_DAO 
+-id : int 
+-index : int 
+-bank: Piggy_bank
+-fmd : Family_Member_DAO 
+--
+ updated(): void
+    + Setid(id: int): void
+    + getId(): int
+    + getName(): String
+    + getGoal(): String
+    + getAllocated(): String
+    + getOwnername(): String
+    + getRemainder(): String
+    + getDescription(): String
+    + IntegerAllocated(): int
+    + IntegerGoal(): int
+    + deleteBank(): void
+    + setIndex(listIndex: int): void
+    + editPiggyBank(): void
+    + see_allocations(): void
+    + getPiggyBank(): Piggy_bank</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1572</x><y>1758</y><w>108</w><h>30</h></coordinates><panel_attributes>lt=&lt;-
+m1=-presenter
+</panel_attributes><additional_attributes>160;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1560</x><y>1656</y><w>186</w><h>72</h></coordinates><panel_attributes>lt=&lt;-
+m1=-view
+
+</panel_attributes><additional_attributes>10;10;290;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>96</x><y>588</y><w>102</w><h>60</h></coordinates><panel_attributes>Family_DaoMemory
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>192</x><y>612</y><w>306</w><h>36</h></coordinates><panel_attributes>lt=-&gt;
+m2= 1..* entities 
+</panel_attributes><additional_attributes>10;10;490;30</additional_attributes></element><element><id>UMLClass</id><coordinates><x>90</x><y>432</y><w>144</w><h>90</h></coordinates><panel_attributes>"Interface"
+Family_Dao
+--
+delete(entity: Family): void
+findAll(): List&lt;Family&gt;
+ save(entity: Family): void
+ find(MemberId: int): Family
+ nextId(): int
+ findByName(name: String): Family
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>132</x><y>516</y><w>18</w><h>84</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;120</additional_attributes></element><element><id>UMLClass</id><coordinates><x>798</x><y>252</y><w>174</w><h>90</h></coordinates><panel_attributes>"Interface"
+FamilyMember_Dao
+--
+delete(entity: Family_member): void
+findAll(): List&lt;Family_member&gt;
+ save(entity: Family): void
+ find(MemberId: int): Family_member
+ nextId(): int
+ findByName(name: String): Family_member
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1134</x><y>276</y><w>144</w><h>90</h></coordinates><panel_attributes>"Interface"
+Money_Alloc_DAO
+--
+delete(entity: Money_alloc): void
+findAll(): List&lt;Money_alloc&gt;
+ save(entity: Money_alloc): void
+ find(MoneyAllocId: int): Money_alloc
+ nextId(): int
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1668</x><y>870</y><w>144</w><h>90</h></coordinates><panel_attributes>"Interface"
+Piggy_Bank_Dao
+--
+delete(entity: Piggy_bank): void
+findAll(): List&lt;Piggy_bank&gt;
+ save(entity: Piggy_bank): void
+ find(PiggyBankId: int): Piggy_bank
+ nextId(): int
+ findByName(name: String): Piggy_bank
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1098</x><y>1284</y><w>144</w><h>90</h></coordinates><panel_attributes>"Interface"
+Expense_Dao
+--
+delete(entity: Expense): void
+findAll(): List&lt;Exprense&gt;
+ save(entity: Expense): void
+ find(ExpenseId: int): Expense
+ nextId(): int
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>786</x><y>1320</y><w>144</w><h>90</h></coordinates><panel_attributes>Income_Dao_Memory
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>816</x><y>432</y><w>144</w><h>90</h></coordinates><panel_attributes>Family_Member_MemoryDao
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>870</x><y>516</y><w>120</w><h>90</h></coordinates><panel_attributes>lt=-&gt;
+m2= 1..* entities 
+</panel_attributes><additional_attributes>10;10;120;130</additional_attributes></element><element><id>Relation</id><coordinates><x>870</x><y>336</y><w>30</w><h>108</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;30;160</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1164</x><y>456</y><w>144</w><h>90</h></coordinates><panel_attributes>Family_Member_MemoryDao
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1200</x><y>360</y><w>30</w><h>108</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;30;160</additional_attributes></element><element><id>Relation</id><coordinates><x>1266</x><y>540</y><w>90</w><h>72</h></coordinates><panel_attributes>lt=-&gt;
+m2= 1..* entities 
+</panel_attributes><additional_attributes>10;10;70;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1500</x><y>852</y><w>144</w><h>90</h></coordinates><panel_attributes>Piggy_Bank_DaoMemory
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2022</x><y>1026</y><w>252</w><h>126</h></coordinates><panel_attributes>MoneyAllocRecyclerViewAdapter
+--
+- moneyAllocList: List&lt;Money_alloc&gt;
+
+--
+    + onCreateViewHolder(parent: ViewGroup, viewType: int): ViewHolder
+    + onBindViewHolder(holder: ViewHolder, position: int): void
+    + getItemCount(): int
+    + updateData(allocations: List&lt;Money_alloc&gt;): void
+--
+    - ViewHolder
+        - textViewAmount: TextView
+        - textViewDate: TextView
+        + ViewHolder(itemView: View)
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>882</x><y>1272</y><w>24</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;20;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>780</x><y>1188</y><w>144</w><h>90</h></coordinates><panel_attributes>"Interface"
+Income_Dao
+--
+delete(entity: Income): void
+findAll(): List&lt;Income&gt;
+ save(entity: Income): void
+ find(MemberId: int): Income
+ nextId(): int
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1098</x><y>1404</y><w>144</w><h>90</h></coordinates><panel_attributes>Expense_DaoMemory
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1464</x><y>834</y><w>66</w><h>66</h></coordinates><panel_attributes>lt=-&gt;
+m2= 1..* entities 
+</panel_attributes><additional_attributes>70;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>1152</y><w>114</w><h>210</h></coordinates><panel_attributes>lt=-&gt;
+m2= 1..* entities 
+</panel_attributes><additional_attributes>120;330;10;200;110;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1644</x><y>852</y><w>90</w><h>36</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>130;40;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1140</x><y>1368</y><w>18</w><h>48</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>1026</x><y>1170</y><w>90</w><h>264</h></coordinates><panel_attributes>lt=-&gt;
+m2= 1..* entities 
+</panel_attributes><additional_attributes>120;420;10;290;60;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2400</x><y>1578</y><w>150</w><h>108</h></coordinates><panel_attributes>AddMoneyAllocationActivity
+--
+# onCreate(Bundle savedInstanceState)
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2412</x><y>1512</y><w>84</w><h>78</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>120;10;10;110</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2628</x><y>1572</y><w>258</w><h>108</h></coordinates><panel_attributes>AddEditPiggyBankPresenter
+--
+    -piggy_bank_dao: Piggy_Bank_DAO 
+    -fmd : Family_Member_DAO 
+    -attchedId : int 
+--
++SavePiggyBank(int Initial_goal, String name, String Desc)
++setAttachedId(int bankId): 
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2544</x><y>1614</y><w>96</w><h>30</h></coordinates><panel_attributes>lt=&lt;-
+m1=-presenter
+</panel_attributes><additional_attributes>140;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>2622</x><y>1512</y><w>84</w><h>72</h></coordinates><panel_attributes>lt=&lt;-
+m1=-view
+
+</panel_attributes><additional_attributes>10;10;120;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2490</x><y>1416</y><w>198</w><h>108</h></coordinates><panel_attributes>"Interface"
+AddEditPiggyBanks
+--
++Show_message(String msg)
+  +successfullyFinishActivityEdit(String message, int id)
+ +successfullyFinishAdd(String message)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2274</x><y>2148</y><w>240</w><h>150</h></coordinates><panel_attributes>ManagePiggyBanksActivity
+--
+
+_-ADDED: int 
+-Show: List&lt;Piggy_bank&gt; 
+-recyclerView:RecyclerView
+
+--
+# onCreate(Bundle savedInstanceState)
+#onActivityResult(int requestCode, int resultCode, Intent data)
+#onResume()
+
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2898</x><y>2148</y><w>180</w><h>156</h></coordinates><panel_attributes>ManagePiggyBanksPresenter
+--
+    - fmd: Family_Member_DAO
+    - fd: Family_DAO
+    - pdg: Piggy_Bank_DAO
+    - bank_id: int
+    - pg: Piggy_bank
+- allocs: List&lt;Money_alloc&gt;
+
+--
++ setView(v: ManageAllocationsView): void
++ setId(id: int): void
++ get_allocations_list(): List&lt;Money_alloc&gt;
++ filter_allocs(start: String, end: String): List&lt;Money_alloc&gt;
++ validate_format(date1: String): boolean
++ add_alloc(): void
+- initDAOs(): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2508</x><y>2208</y><w>90</w><h>24</h></coordinates><panel_attributes>lt=&lt;-
+m1=-viewModel</panel_attributes><additional_attributes>130;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>2568</x><y>2034</y><w>342</w><h>132</h></coordinates><panel_attributes>lt=&lt;-
+m1=-view
+
+</panel_attributes><additional_attributes>10;10;550;200</additional_attributes></element><element><id>Relation</id><coordinates><x>2388</x><y>2034</y><w>84</w><h>126</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>120;10;10;190</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2586</x><y>2172</y><w>132</w><h>66</h></coordinates><panel_attributes>ManagePiggyBanksViewModel
+--
+-presenter : ManagePiggyBanksPresenter
+--
++getPresenter():  ManageMoneyAllocationsPresenter 
++onCleared() 
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2490</x><y>2214</y><w>78</w><h>120</h></coordinates><panel_attributes>lt=&lt;-
+m1=-adapter</panel_attributes><additional_attributes>60;180;70;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>2712</x><y>2202</y><w>198</w><h>24</h></coordinates><panel_attributes>lt=&lt;-
+m1=-presenter </panel_attributes><additional_attributes>310;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2424</x><y>2328</y><w>330</w><h>162</h></coordinates><panel_attributes>PiggyBankRecyclerViewAdapter
+--
+- piggy_banks: List&lt;Piggy_bank&gt;
+    - listener: ItemSelectionListener
+--
+
+    + PiggyBankRecyclerViewAdapter(items: List&lt;Piggy_bank&gt;, listener: ItemSelectionListener)
+    + onCreateViewHolder(parent: ViewGroup, viewType: int): ViewHolder
+    + onBindViewHolder(holder: ViewHolder, position: int): void
+    + getItemCount(): int
+--
+    class ViewHolder
+    - txtItemname: TextView
+    - txtItemId: TextView
+--
+    + ViewHolder(view: View)
+    + toString(): String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2466</x><y>1938</y><w>150</w><h>108</h></coordinates><panel_attributes>"InterFace"
+ManagePiggybanksView
+--
+redirect_to_AddeditActivity()
+ Show_message(String msg)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2178</x><y>1878</y><w>168</w><h>108</h></coordinates><panel_attributes>"Interface"
+ItemSelectionListener
+--
+select_PiggyBank(Piggy_bank pg, int index )</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2250</x><y>1980</y><w>108</w><h>180</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;160;280</additional_attributes></element><element><id>UMLClass</id><coordinates><x>30</x><y>168</y><w>240</w><h>108</h></coordinates><panel_attributes>LoginActivity
+--
+# onCreate(Bundle savedInstanceState)
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>114</x><y>0</y><w>150</w><h>108</h></coordinates><panel_attributes>"Interface"
+LoginView
+
+--
++submit_AuthenticationInfo();
++void Redirect_to_registration_page();
++void Show_Err(String msg);
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>42</x><y>102</y><w>84</w><h>78</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>120;10;10;110</additional_attributes></element><element><id>UMLClass</id><coordinates><x>360</x><y>162</y><w>294</w><h>180</h></coordinates><panel_attributes>LoginPresenter
+--
+_+FAMILY_ID_ = 0 
+_+FAMILYMEMBER_ID_ = 0
+--
++submitAuthenticationInfo(String Family_name, String User, String password ) 
++RegisterFamily()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>264</x><y>204</y><w>108</w><h>30</h></coordinates><panel_attributes>lt=&lt;-
+m1=-presenter
+</panel_attributes><additional_attributes>160;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>252</x><y>102</y><w>186</w><h>72</h></coordinates><panel_attributes>lt=&lt;-
+m1=-view
+
+</panel_attributes><additional_attributes>10;10;290;100</additional_attributes></element><element><id>Relation</id><coordinates><x>228</x><y>336</y><w>222</w><h>156</h></coordinates><panel_attributes>lt=-&gt;
+m2= 1 family_dao 
+</panel_attributes><additional_attributes>350;10;10;240</additional_attributes></element></diagram>

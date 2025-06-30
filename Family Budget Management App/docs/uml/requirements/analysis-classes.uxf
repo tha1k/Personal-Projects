@@ -1,0 +1,65 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>480</x><y>300</y><w>150</w><h>100</h></coordinates><panel_attributes>μέλος οικογένειας
+--
+'Ονομα: String 
+username: String 
+password: String
+is_protetcor: Boolean 
+/total_expenses: έξοδα
+/total_income: έσοδα
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>780</x><y>500</y><w>180</w><h>120</h></coordinates><panel_attributes>έσοδα-έξοδα(transaction)
+--
+amount: Money 
+is_recurring:Boolean 
+Effective:Date_range
+Registration_date:Date
+Description:String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>800</x><y>120</y><w>170</w><h>110</h></coordinates><panel_attributes>κουμπαράς
+--
+desciption: String 
+name: String 
+initial_goal: Money
+allocated_amount: Money 
+/remaing_balance: Money</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>620</x><y>390</y><w>180</w><h>150</h></coordinates><panel_attributes>lt=-
+m1=*
+m2=    1
+spends/earns &gt;</panel_attributes><additional_attributes>160;130;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>620</x><y>130</y><w>200</w><h>190</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=*
+saves for &gt;
+</panel_attributes><additional_attributes>10;170;180;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>60</x><y>140</y><w>130</w><h>80</h></coordinates><panel_attributes>Money 
+--
+amount: BigDecimal
+currency : Currency </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>70</x><y>40</y><w>130</w><h>80</h></coordinates><panel_attributes>Date-Range
+--
+from: Date
+to : Date</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>280</x><y>50</y><w>130</w><h>120</h></coordinates><panel_attributes>&lt;&lt;enumeration&gt;&gt;
+Currency 
+--
+euro: €
+USD: $
+.
+.
+.
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>290</x><y>310</y><w>210</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1..*
+has member &gt;</panel_attributes><additional_attributes>10;20;190;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>80</x><y>280</y><w>220</w><h>130</h></coordinates><panel_attributes>οικογενεια 
+--
+Ημερομηνία_εγγραφής: Date-range
+Όνομα_οικογένειας: String 
+/Disposable_income: Money 
+/total_income:Money
+/total_expenses:Money
+/total_savings: Money 
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>290</x><y>350</y><w>210</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=0..1
+has protector </panel_attributes><additional_attributes>10;20;190;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>810</x><y>320</y><w>170</w><h>110</h></coordinates><panel_attributes>Money Allocation
+--
+amount: Money 
+date_of_transaction: Date 
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>860</x><y>220</y><w>150</w><h>120</h></coordinates><panel_attributes>lt=-
+m1=*
+m2=1
+assignes money to  &gt;
+</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element></diagram>

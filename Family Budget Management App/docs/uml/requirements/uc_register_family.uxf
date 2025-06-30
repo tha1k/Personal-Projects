@@ -1,0 +1,40 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Register Family UI
+</help_text><element><id>UMLActor</id><coordinates><x>10</x><y>10</y><w>80</w><h>110</h></coordinates><panel_attributes>Protector</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>40</x><y>90</y><w>30</w><h>720</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;700;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>60</y><w>30</w><h>750</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;730;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>60</y><w>30</w><h>750</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;730;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>40</x><y>120</y><w>190</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+Εγγραφή οικογένειας</panel_attributes><additional_attributes>170;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>470</y><w>180</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+create_guardian
+(name, password)</panel_attributes><additional_attributes>160;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>40</x><y>430</y><w>190</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+Στοιχεία προστάτη</panel_attributes><additional_attributes>170;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>390</x><y>510</y><w>180</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+register_member
+(boolean isGuardian)</panel_attributes><additional_attributes>160;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>390</x><y>240</y><w>180</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+family</panel_attributes><additional_attributes>10;20;160;20</additional_attributes></element><element><id>Relation</id><coordinates><x>390</x><y>550</y><w>180</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+guardian</panel_attributes><additional_attributes>10;20;160;20</additional_attributes></element><element><id>Relation</id><coordinates><x>40</x><y>640</y><w>190</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+Εισαγωγή ονόματος 
+οικογένειας</panel_attributes><additional_attributes>170;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>160</y><w>180</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+create_family()</panel_attributes><additional_attributes>160;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>680</y><w>180</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+setFamilyName(name)</panel_attributes><additional_attributes>160;20;10;20</additional_attributes></element><element><id>Text</id><coordinates><x>170</x><y>0</y><w>110</w><h>80</h></coordinates><panel_attributes>// Boundary Element
+Register Family UI
+customelement=
+// Boundary Symbol
+drawCircle(50, 50, 20)
+drawLine(20, 50, 30, 50)
+drawLine(20, 30, 20, 70)
+	</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>340</x><y>0</y><w>130</w><h>80</h></coordinates><panel_attributes>// Control Element
+	 Family Control
+customelement=
+// Control Symbol
+drawCircle(50, 50, 20)
+drawLine(44, 31, 54, 21)
+drawLine(44, 31, 54, 41)
+	</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>320</y><w>140</w><h>50</h></coordinates><panel_attributes>show_guar
+dian_form()</panel_attributes><additional_attributes>10;20;120;20</additional_attributes></element><element><id>Relation</id><coordinates><x>230</x><y>370</y><w>130</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+group=group-4</panel_attributes><additional_attributes>10;10;110;10</additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>330</y><w>30</w><h>70</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>220</x><y>350</y><w>20</w><h>60</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>550</x><y>190</y><w>30</w><h>620</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;600;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>390</x><y>200</y><w>180</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+new_family()</panel_attributes><additional_attributes>160;20;10;20</additional_attributes></element><element><id>Text</id><coordinates><x>510</x><y>130</y><w>80</w><h>80</h></coordinates><panel_attributes>// Entity Element
+	        Family
+customelement=
+// Entity Symbol
+drawCircle(50, 50, 20)
+drawLine(30, 70, 70, 70)
+	</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>280</y><w>190</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+family</panel_attributes><additional_attributes>10;20;170;20</additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>590</y><w>180</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+guardian</panel_attributes><additional_attributes>10;20;160;20</additional_attributes></element><element><id>Relation</id><coordinates><x>390</x><y>720</y><w>180</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+setName(name)</panel_attributes><additional_attributes>160;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>210</x><y>120</y><w>20</w><h>600</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>380</x><y>170</y><w>20</w><h>150</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>380</x><y>470</y><w>20</w><h>290</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>550</x><y>210</y><w>20</w><h>60</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>550</x><y>520</y><w>20</w><h>60</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>550</x><y>720</y><w>20</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element></diagram>
