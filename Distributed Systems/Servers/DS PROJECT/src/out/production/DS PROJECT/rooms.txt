@@ -1,0 +1,8 @@
+ROOMS
+roomname 4 athens 1 2 300
+mpampis 2 xalkida 4 5 200
+nikos 5 patra 3 5 123
+panos 1 athens 4 4 400
+baggelhs 4 xania 5 5 500
+nasos 1 saintThomas 5 5 700
+TELOSARXEIOY
