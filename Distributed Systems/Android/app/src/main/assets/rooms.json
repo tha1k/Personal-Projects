@@ -1,0 +1,60 @@
+[{
+    "roomName": "StarsHotel",
+    "noOfPersons": 5,
+    "area": "Chania,Greece",
+    "stars": 3,
+    "noOfReviews": 10,
+    "price":35,
+    "roomImage": "file:///android_asset/room1.bmp"
+    }
+    
+    ,
+    
+     {
+    "roomName": "ElpidasRooms",
+    "noOfPersons": 2,
+    "area": "Chania,Greece",
+    "stars": 5,
+    "noOfReviews": 20,
+    "price":35,
+    "roomImage": "file:///android_asset/room2.bmp"
+    }
+    
+    ,
+    
+      {
+    "roomName": "Petrino",
+    "noOfPersons": 3,
+    "area": "Metsovo,Greece",
+    "stars": 4,
+    "noOfReviews": 6,
+    "price":35,
+    "roomImage": "file:///android_asset/room3.bmp"
+    }
+    
+    ,
+    
+      {
+    "roomName": "FourSeasons",
+    "noOfPersons": 4,
+    "area": "Glyfada,Greece",
+    "stars": 5,
+    "noOfReviews": 100,
+    "price":35,
+    "roomImage": "file:///android_asset/room4.bmp"
+    }
+    
+    ,
+    
+      {
+    "roomName": "AngelosRooms",
+    "noOfPersons": 1,
+    "area": "Limeni,Greece",
+    "stars": 2,
+    "noOfReviews": 11,
+    "price":35,
+    "roomImage": "file:///android_asset/room5.bmp"
+    }
+    
+    
+    ]
