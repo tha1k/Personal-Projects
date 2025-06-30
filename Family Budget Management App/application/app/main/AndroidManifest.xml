@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Familybudget"
+        tools:targetApi="31">
+        <activity
+            android:name=".view.Money_allocation.AddEdit.AddMoneyAllocationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.PiggyBank.Manage.ManagePiggyBanksActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.PiggyBank.Details.DetailsPiggyBankActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.Money_allocation.Manage.ManageMoneyAllocationsActivty"
+            android:exported="false" />
+        <activity
+            android:name=".view.PiggyBank.AddEdit.AddEditPiggyBanksActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.Family.Homepage.HomepageActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.Statistics.CheckStatisticsActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".view.Incomes_Expenses.IncomesExpensesActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".view.Income.AddEditIncome.AddEditIncomeActivity"
+            android:exported="true"/>
+        <activity android:name=".view.Family_Member.CreateFamilyMember.CreateFamilyMemberActivity"/>
+        <activity android:name=".view.Family_Member.EditMembersDetails.EditMembersDetailsActivity"/>
+        <activity android:name=".view.Family_Member.FamilyMemberOptions.FamilyMemberOptionsActivity"/>
+        <activity android:name=".view.Overview_Budget.Overview_BudgetSelf.Overview_BudgetSelfActivity"/>
+        <activity android:name=".view.Overview_Budget.Overview_BudgetFamily.Overview_BudgetFamilyActivity"/>
+        <activity android:name=".view.Overview_Budget.Overview_BudgetMainPage.Overview_BudgetMainPageActivity"/>
+        <activity android:name=".view.Family_Manage.Family_Register.Family_RegisterActivity"/>
+        <activity android:name=".view.Family_Manage.Family_Edit.Family_EditActivity"/>
+        <activity android:name=".view.Family_Manage.Family_MainPage.Family_MainPageActivity"/>
+        <activity
+            android:name=".view.Income.ShowIncomes.IncomeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.Income.Details.IncomeDetailsActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".view.Expense.ShowExpenses.ExpenseActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".view.Expense.Details.ExpenseDetailsActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".view.Expense.AddEditExpense.AddEditExpenseActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".view.Family.Login.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

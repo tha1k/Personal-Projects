@@ -1,0 +1,137 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.Statistics.CheckStatisticsActivity">
+
+
+    <TextView
+        android:id="@+id/homepage_header"
+        android:layout_width="413dp"
+        android:layout_height="102dp"
+        android:background="#5E2AD5"
+        android:fontFamily="cursive"
+        android:padding="25dp"
+        android:text="Statistics"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editStartDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="116dp"
+        android:hint="Start Date"
+        android:inputType="date" />
+
+    <EditText
+        android:id="@+id/editEndDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editStartDate"
+        android:layout_marginTop="19dp"
+        android:hint="End Date"
+        android:inputType="date" />
+
+    <EditText
+        android:id="@+id/editUpperLimit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editEndDate"
+        android:layout_marginTop="17dp"
+        android:hint="Upper Limit"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/editLowerLimit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editUpperLimit"
+        android:layout_marginTop="16dp"
+        android:hint="Lower Limit"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/btnCalculateStatistics"
+        android:layout_width="wrap_content"
+        android:background="@drawable/button"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editLowerLimit"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="96dp"
+        android:text="Calculate Statistics" />
+
+    <TextView
+        android:id="@+id/tvIncomeStatistics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnCalculateStatistics"
+        android:layout_marginTop="16dp"
+        android:text="Income Statistics"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvExpenseStatistics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvIncomeStatistics"
+        android:layout_marginTop="8dp"
+        android:text="Expense Statistics"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvIncomeStatisticsFamCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvExpenseStatistics"
+        android:layout_marginTop="8dp"
+        android:text="Number of families: "
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvIncomeStatisticsMemCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvIncomeStatisticsFamCount"
+        android:layout_marginTop="8dp"
+        android:text="Number of members:"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvIncomeStatisticsIncomeCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvIncomeStatisticsMemCount"
+        android:layout_marginTop="8dp"
+        android:text="Number of incomes:"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvIncomeStatisticsExpenseCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvIncomeStatisticsIncomeCount"
+        android:layout_marginTop="8dp"
+        android:text="Number of expenses:"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="0dp"
+        android:background="#5E2AD5" />
+</RelativeLayout>

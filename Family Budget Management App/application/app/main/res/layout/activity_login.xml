@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/login_header"
+        android:layout_width="408dp"
+        android:layout_height="231dp"
+        android:background="@drawable/pb"
+        android:fontFamily="cursive"
+        android:padding="75dp"
+        android:text="Login"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/logintext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Type your credentials and login to access our services."
+        android:textAlignment="center"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toTopOf="@+id/login_editusername"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_header" />
+
+    <EditText
+        android:id="@+id/login_editusername"
+        android:layout_width="358dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="304dp"
+        android:ems="10"
+        android:hint="Enter username"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/login_editpassword"
+        android:layout_width="358dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:hint="Enter password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/login_editusername"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/login_editusername"
+        app:layout_constraintTop_toBottomOf="@+id/login_editusername"
+        app:layout_constraintVertical_bias="0.048" />
+
+    <EditText
+        android:id="@+id/login_editFamilyName"
+        android:layout_width="358dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:hint="Enter Family Name"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/login_editpassword"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/login_editpassword"
+        app:layout_constraintTop_toBottomOf="@+id/login_editpassword"
+        app:layout_constraintVertical_bias="0.041" />
+
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="279dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginBottom="152dp"
+        android:background="@drawable/button"
+        android:text="login"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_editFamilyName"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/login_noaccount"
+        android:layout_width="342dp"
+        android:layout_height="52dp"
+        android:background="@drawable/button"
+        android:text="Not registered? Create a family!"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/button_login"
+        app:layout_constraintStart_toStartOf="@+id/button_login"
+        app:layout_constraintTop_toBottomOf="@+id/button_login"
+        app:layout_constraintVertical_bias="0.217" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="#5E2AD5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
